@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+{% block title %}Quien!{% endblock %}
+{% block body %}
+Este es quien!
+<br><p>Username: {{ app.environment }}</p>
+<br> app.environment tiene :{{ dump(app.environment) }}<br>
+{{render(controller('CursoMainBundle:Default:ayuda',{'tema':'Rutas'}))}}
+<br>Accedida desde otro controlador jaja
+{% endblock %}

@@ -1,0 +1,31 @@
+{# Extiendo la plantilla base#}
+{% extends "::mibase.html.twig" %}
+
+{% block ciudades_block %}
+<h2>Ciudades</h2>
+<ul>
+{% for ciudad in ciudades %}
+  <li> {{ ciudad.nombre | upper}} </li>
+{% else %}
+  <li> <em><h3>No hay Ciudades</h3></em> </li>
+{% endfor %}
+</ul>
+{% endblock %}
+{% block productos_block %}
+<h2>Productos</h2>
+<ul>
+{% for prod in productos %}
+  <li> 
+  <a href="{{ path('curso_recuperarId', {'id': prod.id}) }}">
+  {{ prod.nombre |capitalize}}
+  </a>
+  </li>
+{% endfor %}
+</ul>
+<div>
+{% include 'CursoMainBundle:Default:quien.html.twig'  %}
+<br>
+Fecha {{ "now" | date("m/d/Y") }}
+
+</div>
+{% endblock %}

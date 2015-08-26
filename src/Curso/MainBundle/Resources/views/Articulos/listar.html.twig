@@ -1,0 +1,11 @@
+<h1>Listado de Articulos</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+    </tr>
+    {% for articulo in articulos %}
+    <tr>
+        <td>{{ articulo.content }}</td>
+    </tr>
+    {% endfor %}
+</table>

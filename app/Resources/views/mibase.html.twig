@@ -1,0 +1,23 @@
+{# Extiendo la plantilla base#}
+{% extends "::base.html.twig" %}
+{# Defino mi titulo#}
+{% block title %}Bienvenido{% endblock %}
+{# Defino mi Hoja de Estilos#}
+{% block stylesheets %}
+ <link href="{{ asset('bundles/cursomain/css/estilosBase.css') }}" rel="stylesheet" type="text/css" />
+ {% endblock %}
+{# Defino mi cuerpo#}
+{% block body %}
+<div id="columnas">
+	<div id="ciudades_block">
+	{% block ciudades_block %}
+	Ciudades
+	{% endblock %}
+	</div>
+	<div id="productos_block">
+	{% block productos_block %}
+	Productos
+	{% endblock %}
+	</div>
+</div>
+{% endblock %}

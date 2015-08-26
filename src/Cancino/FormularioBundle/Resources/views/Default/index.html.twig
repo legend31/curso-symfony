@@ -1,0 +1,35 @@
+{% extends 'CancinoFormularioBundle:Default:home.html.twig' %}
+{% block title %}
+Agregar Producto
+{% endblock %}
+{% block body %}
+{# {{ form(formulario) }} #}
+  {# HAciendolo como dice symfony#}
+  <div class="container">
+    <h1>Agregar Producto</h1>
+    <ol class="breadcrumb">
+      <li><a href="{{ path('cancino_index') }}">Listado</a></li>
+      <li class="active">Agregar Producto</li>
+    </ol>
+    {{ form_start(form,{ 'attr': {'class': 'form-horizontal'}}) }}
+    <div class="form-group">
+      {{ form_label(form.nombre, null, { 'label_attr': {'class': 'col-sm-2 control-label'} }) }}
+      <div class="col-sm-8">
+        {{ form_widget(form.nombre, { 'attr': {'class': 'form-control'} }) }}
+      </div>
+    </div>
+    <div class="form-group">
+      {# Haciendolo como dice symfony con html5#}
+      <label for="form_precio" class="col-sm-2 control-label">Precio</label>
+      <div class="col-sm-8">
+        {{ form_widget(form.precio, { 'attr': {'class': 'form-control'} }) }}
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-8">
+        {{ form_widget(form.Guardar, { 'attr': {'class': 'btn btn-primary'} }) }}
+      </div>
+    </div>
+    {{ form_end(form) }}
+  </div>
+{% endblock %}

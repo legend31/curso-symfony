@@ -1,0 +1,56 @@
+{% extends "::base.html.twig" %}
+{% block title %}
+Productos
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap-theme.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap-theme.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/boostrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/main.css') }}">
+{% endblock %}
+{% block body %}
+<div class="container">
+	<h1>Listado de Productos</h1>
+	<p>Bienvenido <span class="label label-primary">{{ app.session.get('id') }}</span></p>
+	<p><a href="{{  path('cancino_logout')}}"> Salir</a></p>
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<span class="alert-success">
+        {{ flashMessage }}
+			<hr>
+    </span>
+	{% endfor %}
+</div>
+
+	<div class="container">
+		<a href="{{ path('cancino_crearForm') }}" class="btn btn-success" title="Agregar">Agregar</a>
+	</div>
+	<div class="container">
+		<table class="table-responsive">
+			<table class="table table-bordered table-hover">
+				<hr>
+				<thead>
+				<th>Producto</th>
+				<th>Precio</th>
+				<th>Acciones</th>
+				</thead>
+				<tbody>
+				{% for prod in producto %}
+					<tr>
+						<td>{{ prod.nombre }}</td>
+						<td>{{ prod.precio }}</td>
+						<td>
+							<a href="{{ path('cancino_modificar',{'id':prod.id}) }}" title="Modificar">
+								<img src="{{ asset('bundles/cursomain/images/actualizar.png') }}">
+							</a>
+							<a href="{{ path('cancino_eliminar',{'id':prod.id}) }}" title="Eliminar">
+								<img src="{{ asset('bundles/cursomain/images/delete.png') }}">
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</table>
+	</div>
+{% endblock %}

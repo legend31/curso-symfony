@@ -1,0 +1,12 @@
+doc_val:
+    path:     /doc/val
+    defaults: { _controller: DocRelBundle:Default:valid }
+doc_rel_homepage:
+    path:     /doc/{name}
+    defaults: { _controller: DocRelBundle:Default:index }
+doc_rel_get:
+    path:     /doc/get/{id}
+    defaults: { _controller: DocRelBundle:Default:get3 }
+doc_val:
+    path:     /doc/val
+    defaults: { _controller: DocRelBundle:Default:valid }

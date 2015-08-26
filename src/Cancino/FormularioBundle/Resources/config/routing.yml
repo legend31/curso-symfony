@@ -1,0 +1,24 @@
+cancino_formulario_homepage:
+    path:     /form/hello/{name}
+    defaults: { _controller: CancinoFormularioBundle:Default:index }
+cancino_crearForm:
+    path:     /form/crear/{nom}/{pre}
+    defaults: { _controller: CancinoFormularioBundle:Default:llamarForm, nom:Nombre,pre:0}
+cancino_index:
+    path:     /form/crud
+    defaults: { _controller: CancinoFormularioBundle:Default:home }
+cancino_modificar:
+    path:     /form/crud/modificar/{id}
+    defaults: { _controller: CancinoFormularioBundle:Default:modificar }
+cancino_eliminar:
+    path:     /form/crud/eliminar/{id}
+    defaults: { _controller: CancinoFormularioBundle:Default:eliminar }
+cancino_form:
+    path:     /form
+    defaults: { _controller: CancinoFormularioBundle:Default:form }
+cancino_logout:
+    path:     /form/logout
+    defaults: { _controller: CancinoFormularioBundle:Default:logout }
+cancino_combo:
+    path:     /combo
+    defaults: { _controller: CancinoFormularioBundle:Default:combo }

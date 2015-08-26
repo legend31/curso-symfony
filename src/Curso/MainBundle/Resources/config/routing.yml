@@ -1,0 +1,67 @@
+curso_main_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CursoMainBundle:Default:index }
+
+curso_main_help:
+    path:     /ayuda/{tema}
+    defaults: { _controller: CursoMainBundle:Default:ayuda } 
+mensaje:
+    path:     /mensaje/{name}/{lastname}
+    defaults: { _controller: CursoMainBundle:Fer:index, name:Ferdi,lastname:Bola,color:verde }
+curso_crud:
+    path:     /Productos/crud
+    defaults: { _controller: CursoMainBundle:Producto:index }
+curso_actualizar:
+    path:     /Productos/actualizar/{id}/{nombre}/{precio}
+    defaults: { _controller: CursoMainBundle:Producto:actualizar, id:1,precio:15,nombre:producto}
+curso_recuperar:
+    path:     /Productos/recuperar
+    defaults: { _controller: CursoMainBundle:Producto:recuperar }
+curso_recuperarId:
+    path:     /Productos/recuperarId/{id}
+    defaults: { _controller: CursoMainBundle:Producto:recuperarId}
+curso_eliminar:
+    path:     /Productos/eliminar/{id}
+    defaults: { _controller: CursoMainBundle:Producto:eliminar  }
+curso_alta:
+    path:     /Productos/alta/{nombre}/{precio}
+    defaults: { _controller: CursoMainBundle:Producto:alta, precio:15,nombre:producto}
+curso_getAll:
+    path:     /Productos/getAll
+    defaults: { _controller: CursoMainBundle:Producto:getAll}
+curso_sesion:
+    path:     /pruebas/sesion
+    defaults: { _controller: CursoMainBundle:Fer:sesion }
+curso_form:
+    path:     /pruebas/form
+    defaults: { _controller: CursoMainBundle:Fer:formulario }        
+curso_pruebas:
+    path:     /pruebas/{op}
+    defaults: { _controller: CursoMainBundle:Fer:respuesta, op:prueba}
+informacion:
+    path:     /info/{pagina}
+    defaults: { _controller: CursoMainBundle:Fer:info, pagina:quien}
+    requirements:
+        pagina: quien|paraquien
+articulo_listar:
+    pattern:  /articulos/listar
+    defaults: { _controller: CursoMainBundle:Articulos:listar }
+
+articulo_crear:
+    pattern:  /articulos/crear
+    defaults: { _controller: CursoMainBundle:Articulos:crear }
+
+articulo_editar:
+    pattern:  /articulos/editar/{id}
+    defaults: { _controller: CursoMainBundle:Articulos:editar }
+
+articulo_visualizar:
+    pattern:  /articulos/visualizar/{id}
+    defaults: { _controller: CursoMainBundle:Articulos:visualizar }
+
+articulo_borrar:
+    pattern:  /articulos/borrar/{id}
+    defaults: { _controller: CursoMainBundle:Articulos:borrar }
+dql_listar:
+    pattern:  /dql/listar
+    defaults: { _controller: CursoMainBundle:Dql:listar }    

@@ -1,0 +1,4 @@
+services:
+#    cancino_formulario.example:
+#        class: Cancino\FormularioBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

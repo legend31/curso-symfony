@@ -1,0 +1,15 @@
+{# Extiendo la plantilla base#}
+{% extends "::base.html.twig" %}
+{# Defino mi titulo#}
+{% block title %}Bienvenido{% endblock %}
+{# Defino mi Hoja de Estilos#}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap-theme.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap-theme.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/boostrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('bundles/cancinoformulario/css/main.css') }}">
+ {% endblock %}
+{# Defino mi cuerpo#}
+{% block body %}
+{% endblock %}

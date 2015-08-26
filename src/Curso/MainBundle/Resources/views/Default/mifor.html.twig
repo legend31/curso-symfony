@@ -1,0 +1,30 @@
+{# Extiendo la plantilla base#}
+{% extends "::mibase.html.twig" %}
+
+{% block productos_block %}
+<h2>Operaciones</h2>
+<div>
+<ul>
+  <li> 
+  <a href="{{ path('curso_alta') }}">
+  <img src="{{ asset('bundles/cursomain/images/crear.png') }}" width="40px">
+  </a>
+  </li>
+    <li> 
+  <a href="{{ path('curso_getAll') }}">
+  <img src="{{ asset('bundles/cursomain/images/consultar.png') }}" width="40px">
+  </a>
+  </li>
+    <li> 
+  <a href="{{ path('curso_actualizar') }}">
+  <img src="{{ asset('bundles/cursomain/images/actualizar.png') }}" width="40px">
+  </a>
+  </li>
+    <li> 
+  <a href="#">
+  <img src="{{ asset('bundles/cursomain/images/delete.png') }}" width="40px">
+  </a>
+  </li>
+</div>
+</ul>
+{% endblock %}
